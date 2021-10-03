@@ -1,5 +1,7 @@
 
-<?php include('./controllers/register.php'); ?>
+<?php 
+include('controllers/register.php'); 
+?>
 
 <!doctype html>
 <html lang="en">
@@ -8,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>PHP User Registration System Example</title>
     <!-- jQuery + Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,8 +24,14 @@
     <div class="App">
         <div class="vertical-center">
             <div class="inner-block">
-                <form action="./controllers/register.php" method="post">
+                <form action="" method="post">
                     <h3>Register</h3>
+                    <?php
+        if ($insert == true) {
+          echo "  <p class= 'desc'> Success Fully Register </p> "; 
+        }
+        ?>
+       
 
                     <?php echo $success_msg; ?>
                     <?php echo $email_exist; ?>
@@ -77,6 +85,7 @@
             </div>
         </div>
     </div>
+   
 
 </body>
 

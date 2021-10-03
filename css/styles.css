@@ -66,6 +66,10 @@
     justify-content: center;
     flex-direction: column;
   }
+  .desc{
+    color: white;
+    text-align: center;
+  }
 
   img{
 	width: 150px;
