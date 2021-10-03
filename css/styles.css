@@ -45,8 +45,9 @@
   }
   
   .navbar {
-    background: #1833FF !important;
+    background: transparent;
     width: 100%;
+    color: #ffffff;
   }
   
   .btn-outline-primary {
@@ -55,7 +56,7 @@
   }
   
   .btn-outline-primary:hover {
-    background-color: #1833FF;
+    background-color: hsl(34, 100%, 55%);
     color: #ffffff;
   }
   

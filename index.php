@@ -13,7 +13,8 @@
 </head>
 
 <body>
-
+    
+    <?php include('header.php'); ?>
     <!-- Login form -->
     <div class="App">
         <div class="vertical-center">
