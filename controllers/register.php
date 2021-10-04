@@ -1,23 +1,11 @@
 <?php
    
     // Database connection
-    
-    ob_start(); // Enable us to use Headers
-
-    // Set sessions
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-
-    $hostname = "localhost";
-    $username = "root";
-    $password = "Mano@@999";
-    $dbname = "user_register_login";
-    
-    $connection = mysqli_connect($hostname, $username, $password, $dbname) or die("Database connection not established.");
+    include ('./config/dbcon.php');
    
-    // Swiftmailer lib
-    //require_once './lib/vendor/autoload.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
     
     // Error & success messages
     global $success_msg, $email_exist, $f_NameErr, $l_NameErr, $_emailErr, $_mobileErr, $_passwordErr;
@@ -113,6 +101,73 @@
                         $insert = true;
 
                     }
+
+                    if($sqlQuery){
+                        $msg = 'Click on the activation link to verify your email. <br><br>
+                          <a href="http://localhost:8888/php-user-authentication/user_verificaiton.php?token='.$token.'"> Click here to verify email</a>
+                        ';
+                        
+                        require 'lib/Exception.php';
+                        require 'lib/PHPMailer.php';
+                        require 'lib/SMTP.php';
+                        
+                        
+                        // Create Instance of PHPMailer
+                        $mail = new PHPMailer();
+                        
+                        // set mailer to use SMTP
+                        
+                        $mail -> isSMTP();
+                        
+                        // define smtp host
+                        $mail -> Host = "smtp.gmail.com";
+                        
+                        //enable smtp authentication
+                        
+                        $mail -> SMTPAuth = "true";
+                        
+                        // set type of encryption (ssl/tls)
+                        
+                        $mail -> SMTPSecure = "tls";
+                        
+                        // set port to connect smtp
+                        
+                        $mail -> Port = "587";
+                        
+                        // username
+                        
+                        $mail -> Username = "attirehman388@gmail.com";
+                        $mail -> Password = "Like@@999";
+                        
+                        // Email Subject body etc
+                        
+                        $mail -> Subject = "Test Email Using PHP";
+                        $mail -> setFrom('attirehman388@gmail.com');
+                        $mail -> Body = $msg;
+                        
+                        // Add recipient 
+                        
+                        $mail -> addAddress($email);
+                        
+                        if($mail -> send()){
+                        
+                            echo "email sent";
+                        
+                        }else{
+                            echo 'error';
+                        }
+                        
+                        // closing smtp connection
+                        $mail -> smtpClose();
+
+                        
+                        
+                    }   
+
+                    
+                    
+                    
+
 
                    
                 }
