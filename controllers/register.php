@@ -104,8 +104,10 @@
 
                     if($sqlQuery){
                         $msg = 'Click on the activation link to verify your email. <br><br>
-                          <a href="http://localhost:8888/php-user-authentication/user_verificaiton.php?token='.$token.'"> Click here to verify email</a>
+                          <a href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/user_verification.php?token='.$token.'"> Click here to verify email</a>
                         ';
+
+                       
                         
                         require 'lib/Exception.php';
                         require 'lib/PHPMailer.php';
