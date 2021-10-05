@@ -36,17 +36,31 @@
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" name="email_signin" id="email_signin" />
+                        <input type="email" class="form-control" name="email_signin" id="email_signin" value="<?php if(isset($_COOKIE['emailcookie'])){
+                            echo $_COOKIE['emailcookie'];} ?>" />
                     </div>
 
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password_signin" id="password_signin" />
+                        <input type="password" class="form-control" name="password_signin" id="password_signin" value = "<?php if(isset($_COOKIE['passqordcookie'])){
+                            echo $_COOKIE['passwordcookie'];} ?>"/>
                     </div>
 
-                    <button type="submit" name="login" id="sign_in"
-                        class="btn btn-outline-primary btn-lg btn-block">Sign
-                        in</button>
+                    <p style="color: #fff;">Forgot Password?    <a href="RecoverEmail.php" style="color: orange;"> Click Here </a> </p>
+
+                    <div class="form-check">
+                        <input class="form-check-input" name= "remember" type="checkbox"  >
+                        <label class="form-check-label" />
+                            Remember Me
+                        </label>
+                    </div>
+
+                    <button style= "margin-top: 12px; margin-bottom: 13px" type="submit" name="login" id="sign_in"
+                        class="btn btn-outline-primary btn-lg btn-block">sign in</button>
+
+                        
+                        <p style="color: #fff;">Create Account      <a href="signup.php" style="color: orange;">          Click Here </a> </p>
+                        
                 </form>
             </div>
         </div>

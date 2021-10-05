@@ -67,7 +67,20 @@
                 // Allow only verified user
                 if($is_active == '1') {
                     if($email_signin == $email && $password_signin == $password) {
-                       header("Location: ./dashboard.php");
+                        
+                        // set cookies for remember me logic
+
+                        if(isset($_POST['remember'])){
+                            setcookie('emailcookie', $email_signin, time() + 86400);
+                            setcookie('passwordcookie', $password_signin, time() +86400);
+                            header("Location: ./dashboard.php");
+
+                            
+                        }else{
+
+                            header("Location: ./dashboard.php");
+                            
+                        }
                        
                        $_SESSION['id'] = $id;
                        $_SESSION['firstname'] = $firstname;

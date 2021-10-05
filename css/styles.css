@@ -48,6 +48,7 @@
     background: transparent;
     width: 100%;
     color: #ffffff;
+    margin-bottom: 20px;
   }
   
   .btn-outline-primary {
@@ -91,6 +92,7 @@
     padding: 40px 55px 45px 55px;
     transition: all .3s;
     border-radius: 20px;
+    
   }
   
   .vertical-center .form-control:focus {

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: transparent; ">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: transparent; margin-bottom: 20px; ">
     <div class="container">
         <a class="navbar-brand" href="#" style="color: hsl(34, 100%, 55%);">PHP User Auth System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
