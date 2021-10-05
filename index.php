@@ -13,8 +13,13 @@
 </head>
 
 <body>
-    
+     
+    <!-- Include Header Script -->
     <?php include('header.php'); ?>
+
+     <!-- Login script -->
+     <?php include('./controllers/login.php'); ?>
+
     <!-- Login form -->
     <div class="App">
         <div class="vertical-center">
@@ -22,6 +27,13 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC-wm6_089pLSBSCkzKLlx6hDkYt1rI-lYMz8-Uglyw_fQPJ3O-zxANjEoMjAx4tFyvBk&usqp=CAU" alt="image">
                 <form action="" method="post">
                     <h3>Login</h3>
+
+                    <?php echo $accountNotExistErr; ?>
+                    <?php echo $emailPwdErr; ?>
+                    <?php echo $verificationRequiredErr; ?>
+                    <?php echo $email_empty_err; ?>
+                    <?php echo $pass_empty_err; ?>
+
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control" name="email_signin" id="email_signin" />
