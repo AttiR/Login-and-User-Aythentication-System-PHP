@@ -29,11 +29,11 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC-wm6_089pLSBSCkzKLlx6hDkYt1rI-lYMz8-Uglyw_fQPJ3O-zxANjEoMjAx4tFyvBk&usqp=CAU" alt="image">
                 <form action="" method="post">
                     <h3>Login</h3>
-                    <?php 
-                    
-                        echo  $_SESSION['message'];
-                    
-                    ?>
+                    <span class="color:Green"><?php 
+                     if (isset($_SESSION['message'])){
+                         echo  $_SESSION['message'];
+                     }
+                    ?></span>
                     
 
                     <?php echo $accountNotExistErr; ?>
