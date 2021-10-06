@@ -65,7 +65,7 @@ if (isset($_POST["submit"])) {
                         // username
                         
                         $mail -> Username = "attirehman388@gmail.com";
-                        $mail -> Password = "Like@@999";
+                        $mail -> Password = "xxxxxxx";
                         
                         // Email Subject body etc
                         
