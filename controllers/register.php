@@ -139,7 +139,7 @@
                         // username
                         
                         $mail -> Username = "attirehman388@gmail.com";
-                        $mail -> Password = "Like@@999";
+                        $mail -> Password = "xxxxxxxx";
                         
                         // Email Subject body etc
                         
