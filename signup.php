@@ -15,10 +15,12 @@ include('controllers/register.php');
     <!-- jQuery + Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- FontAwsome -->
+    <script src="https://kit.fontawesome.com/d54712eab9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-   
+
     <?php include('header.php'); ?>
 
     <div class="App">

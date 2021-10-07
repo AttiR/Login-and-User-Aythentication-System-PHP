@@ -7,12 +7,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/index.php" style="color: ivory;">Sign in</a>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/home.php" style="color: ivory;"> <i style="color: orange; margin-right: 5px;" class="fas fa-home"></i>  Home </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/signup.php" style="color: ivory;">Sign up</a>
+                    <a class="nav-link" href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/index.php" style="color: ivory;"> <i style="color: orange; margin-right: 5px;" class="fas fa-sign-in-alt"></i>Sign in </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/Login-and-User-Aythentication-System-PHP/signup.php" style="color: ivory;"> Sign up <i style="color: palegreen; margin-right: 5px;" class="fas fa-user-plus"></i></a>
+                </li>
+
             </ul>
         </div>
     </div>

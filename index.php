@@ -12,6 +12,7 @@
     <!-- jQuery + Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d54712eab9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,11 +30,28 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC-wm6_089pLSBSCkzKLlx6hDkYt1rI-lYMz8-Uglyw_fQPJ3O-zxANjEoMjAx4tFyvBk&usqp=CAU" alt="image">
                 <form action="" method="post">
                     <h3>Login</h3>
-                    <span class="color:Green"><?php 
-                     if (isset($_SESSION['message'])){
-                         echo  $_SESSION['message'];
-                     }
-                    ?></span>
+                    <center>
+                        <span style="color: #fff; ">
+                            <?php 
+                            if (isset($_SESSION['message'])){
+                                echo  $_SESSION['message'];
+                            }
+                            ?>
+                        </span> <br>
+                        <span style="color: palegreen;">
+                            <?php
+
+                            if(isset($_SESSION['updatemessage'])){
+                                echo $_SESSION['updatemessage'];
+                            }
+                            ?>
+                        </span>
+                    </center>
+                    
+                    
+                    
+
+                    
                     
 
                     <?php echo $accountNotExistErr; ?>
