@@ -11,7 +11,7 @@
 
     $hostname = "localhost";
     $username = "root";
-    $password = "nHNA3-cP2HFRGzW/";
+    $password = "password";
     $dbname = "user_register_login";
     
     $connection = mysqli_connect($hostname, $username, $password, $dbname) or die("Database connection not established.");
